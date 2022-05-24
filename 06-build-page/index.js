@@ -72,7 +72,7 @@ function createPage() {
     if (error) {
       return console.error(error.message);
     }
-    mkdir(newFolder, { recursive: true });
+    await mkdir(newFolder, { recursive: true });
     copyAssets();
     combienStylesInOneBundle();
     createHTML();
